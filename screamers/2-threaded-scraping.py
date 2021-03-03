@@ -24,8 +24,8 @@ if __name__ == "__main__":
 
     start = timer()
 
-    with ThreadPoolExecutor(500) as handler:
-        results = handler.map(just_a_request, range(500))
+    with ThreadPoolExecutor(100) as handler:
+        results = handler.map(just_a_request, range(1000))
 
     end = timer()
 
