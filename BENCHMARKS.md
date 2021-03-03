@@ -26,4 +26,4 @@ But, there seems to be a max to this curve (of course). When we approach 1,000 t
 
 ### The takeaway from this test...
 
-Don't stuff your threads. They enjoy some space!
+Don't stuff your threads. They DO enjoy their space. But, don't give them too much credit - they are M1's... don't need to be boring and go as low as your core count 😉
