@@ -17,3 +17,5 @@ In the below test, there are two variables that can be changed: threads and how 
 
 * M1 Python 3, 50 threads, 50 at-once: 0.53s
 * M1 Python 3, 500 threads, 500 at-once: 3.14s
+
+With these results, we 10x'd our required responses with only a 6x increase in time-to-serve. This says Apple's M1 threads are efficient with their thread-switching (something Python naturally struggles with).
