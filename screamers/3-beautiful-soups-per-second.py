@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 
 start = timer()
 
-page = str(open("sources/3-page.html", "r").read())
+page = str(open("sources/3-page.html", "r", errors="ignore").read())
 page = "".join([c for c in page if ord(c) < 128])
 print("page length:", len(page))
 parsed = [BeautifulSoup(page, "html.parser") for _ in range(5000)]
