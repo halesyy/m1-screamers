@@ -3,7 +3,7 @@
 | Code-name | Hardware                        | Estimate CPU Cost    |
 |-----------|---------------------------------|----------------------------|
 | M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal | US$280 |
-| PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$45 [Google](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
+| PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$45 [(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
 
 ### 1-one-to-million.py
 
