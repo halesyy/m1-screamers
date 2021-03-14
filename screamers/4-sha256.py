@@ -13,6 +13,7 @@ for i in range(1000000):
     hash(random(10))
 
 end = timer()
+
 time_taken = (end - start)
 
 print("it took", time_taken, "seconds to complete this task")

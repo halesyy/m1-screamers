@@ -51,7 +51,7 @@ Test run on a 6,053 length page.
 Perform 1,000,000 iterations of a sha256 hash digest + generate a random string of 10 to use as the to-hash.
 
 * M1: 4.95 seconds
-* PC: 
+* PC: 4.42 seconds
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
