@@ -41,8 +41,10 @@ A simple compute single-threaded test to observe how many soups a single thread 
 
 Test run on a 6,053 length page.
 
-* M1: untested
-* PC: 475 per-second average
+* M1: 530 per-second (550 max)
+* PC: 485 per-second (489 max)
+
+**M1 out-performs by 9.2%**. M1 out-performs my personal scrape workspace in a single-core approach.
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
