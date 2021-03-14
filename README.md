@@ -46,6 +46,13 @@ Test run on a 6,053 length page.
 
 **M1 out-performs by 9.2%**. M1 out-performs my personal scrape workspace in a single-core approach.
 
+### 🔥 4-sha256.py
+
+Perform 1,000,000 iterations of a sha256 hash digest + generate a random string of 10 to use as the to-hash.
+
+* M1: 4.95 seconds
+* PC: 
+
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
 
