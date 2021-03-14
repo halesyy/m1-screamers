@@ -42,7 +42,7 @@ A simple compute single-threaded test to observe how many soups a single thread 
 Test run on a 6,053 length page.
 
 * M1: untested
-* PC: 500 per-second average
+* PC: 475 per-second average
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
