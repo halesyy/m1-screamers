@@ -1,17 +1,17 @@
-## Testing Tools
+## 🧪 Testing Tools
 
 | Code-name | Hardware                        | Estimate CPU Cost    |
 |-----------|---------------------------------|----------------------------|
 | M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal | US$280 [(Intel)](https://ark.intel.com/content/www/us/en/ark/products/88195/intel-core-i7-6700k-processor-8m-cache-up-to-4-20-ghz.html) |
 | PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$45 [(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
 
-### 1-one-to-million.py
+### 🔥 1-one-to-million.py
 
 * M1 Python ~3.9.1: 1.78s
 * M1 Python 2: 0.98s
 * PC Python 3.8.5: 39.89
 
-## 2-threaded-scraping.py
+## 🔥 2-threaded-scraping.py
 
 In the below test, there are two variables that can be changed: threads and how many are done at-once. If we choose to run 50 threads, this means we'll make 50 requests in total. If we do 10 at-once, it will perform these in 10-chunk batches. The at-once metric is important since it's a key value contributing to scrape performance for cloud-based systems or locally.
 
@@ -29,14 +29,14 @@ With these results, we 10x'd our required responses with only a 6x increase in t
 
 But, there seems to be a max to this curve (of course). When we approach 1,000 threads and 1,000 at-once, we've stuffed the threads, causing a Pythonic ms-feedback loop where the threads forcibly keep switching without completing the whole request (my guess). But, when switching 1,000 threads to 100 at-once, we return to our agile speeds with 6.8 seconds.
 
-### The takeaway from this test...
+### 🤔 The takeaway from this test...
 
 Don't stuff your threads. They DO enjoy their space. But, don't give them too much credit - they are M1's... don't need to be boring and go as low as your core count 😉
 
-# The M1 Screamers
+# ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
 
-### Future Function Ideas:
+### 📝 Future Screamer Test Ideas:
 
 * Print the first million numbers
 * Threading a scrape and BeautifulSoup parse with adjustable threads
