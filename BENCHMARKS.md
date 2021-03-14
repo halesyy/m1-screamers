@@ -2,14 +2,15 @@
 
 | Code-name | Hardware                        |
 |-----------|---------------------------------|
-| M1        | Apple M1 MacBook Air, 8gb 256gb |
-| PC        |                                 |
+| M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal |
+| PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell |
 |           |                                 |
 
 ### 1-one-to-million.py
 
-* M1 Python 3: 1.78s
+* M1 Python ~3.9.1: 1.78s
 * M1 Python 2: 0.98s
+* PC Python 3.8.5: 39.89
 
 ## 2-threaded-scraping.py
 
@@ -19,6 +20,11 @@ In the below test, there are two variables that can be changed: threads and how 
 * M1 Python 3, 500 threads, 500 at-once: 3.14s
 * M1 Python 3, 1000 threads, 1000 at-once: 22.19s
 * M1 Python 3, 1000 threads, 100 at-once: 6.8s
+
+* PC Python 3.8.5, 50 threads, 50 at-once: 0.53s
+* PC Python 3.8.5, 500 threads, 500 at-once: 3.49s
+* PC Python 3.8.5, 1000 threads, 1000 at-once: 7.12s
+* PC Python 3.8.5, 1000 threads, 100 at-once: 6.9s
 
 With these results, we 10x'd our required responses with only a 6x increase in time-to-serve. This says Apple's M1 threads are efficient with their thread-switching (something Python naturally struggles with).
 
