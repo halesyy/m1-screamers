@@ -11,7 +11,7 @@
 * M1 Python 2: 0.98s
 * PC Python 3.8.5: 39.89
 
-## 🔥 2-threaded-scraping.py
+### 🔥 2-threaded-scraping.py
 
 In the below test, there are two variables that can be changed: threads and how many are done at-once. If we choose to run 50 threads, this means we'll make 50 requests in total. If we do 10 at-once, it will perform these in 10-chunk batches. The at-once metric is important since it's a key value contributing to scrape performance for cloud-based systems or locally.
 
