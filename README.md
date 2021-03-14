@@ -7,7 +7,7 @@
 
 ### 🔥 1-one-to-million.py
 
-* M1 Python ~3.9.1: 1.78s
+* M1 Python 3.9.1: 1.78s
 * M1 Python 2: 0.98s
 * PC Python 3.8.5: 39.89
 
@@ -32,6 +32,17 @@ But, there seems to be a max to this curve (of course). When we approach 1,000 t
 ### 🤔 The takeaway from this test...
 
 Don't stuff your threads. They DO enjoy their space. But, don't give them too much credit - they are M1's... don't need to be boring and go as low as your core count 😉
+
+### 🔥 3-beautiful-soups-per-second.py
+
+From here down, the Python versions are the same (PC: 3.8.5, MAC:  3.9.1)
+
+A simple compute single-threaded test to observe how many soups a single thread can parse per-second. Important for engineers who are looking for an efficient machine to scrape from.
+
+Test run on a 6,053 length page.
+
+* M1: untested
+* PC: 500 per-second average
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
