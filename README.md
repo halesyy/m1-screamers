@@ -1,4 +1,4 @@
-## 🧪 Testing Tools
+### 🧪 Testing Tools
 
 | Code-name | Hardware                        | Estimate CPU Cost    |
 |-----------|---------------------------------|----------------------------|
@@ -33,7 +33,7 @@ But, there seems to be a max to this curve (of course). When we approach 1,000 t
 
 Don't stuff your threads. They DO enjoy their space. But, don't give them too much credit - they are M1's... don't need to be boring and go as low as your core count 😉
 
-# ❓ The M1 Screamers
+### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
 
 ### 📝 Future Screamer Test Ideas:
