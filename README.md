@@ -37,7 +37,7 @@ Don't stuff your threads. They DO enjoy their space. But, don't give them too mu
 
 ### 🔥 3-beautiful-soups-per-second.py
 
-A simple compute single-threaded test to observe how many soups a single thread can parse per-second. Important for engineers who are looking for an efficient machine to scrape from.
+A simple compute single-threaded test to observe how many soups a single thread can parse per-second. Important for engineers who are looking for an efficient machine to scrape from. Times the loading of the page (`screamers/sources/3-page.html`), removing unicode (by removing `ord < 128`) then doing 5,000 soup parses.
 
 Test run on a 6,053 length page.
 
