@@ -53,6 +53,13 @@ Perform 1,000,000 iterations of a sha256 hash digest + generate a random string 
 * M1: 4.95 seconds
 * PC: 4.42 seconds
 
+### 🔥 5-jacobian.py
+
+Performs 1,000,000 Jacobian computations. I'm not too familiar with this branch of mathematics, but I have seen many implementations of Bitcoin wallet generation using Jacobian mathematics. 1,000 total iterations where `t` spans 1->1,000, and `a, b` both span 1->1,000 in each `t` iteration. Lower the better.
+
+* M1: 17.64 seconds
+* PC: untested
+
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
 
