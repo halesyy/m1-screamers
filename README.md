@@ -57,7 +57,7 @@ Perform 1,000,000 iterations of a sha256 hash digest + generate a random string 
 
 Performs 1,000,000 Jacobian computations. I'm not too familiar with this branch of mathematics, but I have seen many implementations of Bitcoin wallet generation using Jacobian mathematics. 1,000 total iterations where `t` spans 1->1,000, and `a, b` both span 1->1,000 in each `t` iteration. Lower the better.
 
-* M1: 17.64 seconds
+* M1: 17.25 seconds
 * PC: untested
 
 ### ❓ The M1 Screamers
