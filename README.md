@@ -2,8 +2,8 @@
 
 | Code-name | Hardware                        | Estimate CPU Cost    |
 |-----------|---------------------------------|----------------------------|
-| M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal | US$280 [(Intel)](https://ark.intel.com/content/www/us/en/ark/products/88195/intel-core-i7-6700k-processor-8m-cache-up-to-4-20-ghz.html) |
-| PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$45 [(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
+| M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal | US$45 [(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
+| PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$280 [(Intel)](https://ark.intel.com/content/www/us/en/ark/products/88195/intel-core-i7-6700k-processor-8m-cache-up-to-4-20-ghz.html) |
 
 From here down, the Python versions are the same (PC: 3.8.5, M1: 3.9.2) unless specified otherwise.
 
@@ -59,6 +59,15 @@ Performs 1,000,000 Jacobian computations. I'm not too familiar with this branch 
 
 * M1: 17.25 seconds
 * PC: 20.81 seconds
+
+### 🔥 6-threaded-compute.py
+
+Just 50 threads filled with heavy compute. Store the first 10,000,000 integers in a list, then divide them by a float (`5.2125`) and return the length of the list.
+
+* M1: 255.48 seconds (~4 minutes)
+* PC: untested
+
+This test was interesting, since the M1 used a lot of "virtual memory" during this test. "Memory Used" displayed 28GB on my 8GB model as "Virtual Memory".
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
