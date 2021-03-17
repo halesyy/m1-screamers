@@ -64,10 +64,15 @@ Performs 1,000,000 Jacobian computations. I'm not too familiar with this branch 
 
 Just 50 threads filled with heavy compute. Store the first 10,000,000 integers in a list, then divide them by a float (`5.2125`) and return the length of the list.
 
-* M1: 255.48 seconds (~4 minutes)
+* M1: 255.48 seconds (~4 minutes) - 50 threads, 50 at-once
+* M1: 97.5 seconds - 50 threads, 8 at-once
+* M1: 49.87 seconds - 50 threads, 4 at-once
+* M1: 48.76 seconds - 50 threads, 1 at-once
 * PC: untested
 
-This test was interesting, since the M1 used a lot of "virtual memory" during this test. "Memory Used" displayed 28GB on my 8GB model as "Virtual Memory".
+This test was interesting, since the M1 used a lot of "virtual memory" during this test. "Memory Used" displayed 28GB on my 8GB model as "Virtual Memory". Further, this reinforces the idea to not stuff threads in M1 Python.
+
+In reality I just realised this is because of GIL and Python and compute, so what's happening is nothing is happening in 3/4 threads when 1 is working. So, I'll re-write this in the future using multiprocessing or another measure to steer from this.
 
 ### ❓ The M1 Screamers
 Pushing to the border: multiprocessing, threading, scraping, and compute tests with Apple M1 Silicon & their Windows/Linux counterparts.
