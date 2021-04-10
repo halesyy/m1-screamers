@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     start = timer()
 
-    with ThreadPoolExecutor(1) as handler:
+    with ThreadPoolExecutor(4) as handler:
         results = handler.map(high_compute, range(50))
 
     end = timer()

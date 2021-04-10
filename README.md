@@ -5,13 +5,16 @@
 | M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal | US$45 [(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip) |
 | PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell | US$280 [(Intel)](https://ark.intel.com/content/www/us/en/ark/products/88195/intel-core-i7-6700k-processor-8m-cache-up-to-4-20-ghz.html) |
 
+LX = same stats of PC, but ran on a Linux distro (ElementaryOS).
+
 From here down, the Python versions are the same (PC: 3.8.5, M1: 3.9.2) unless specified otherwise.
 
 ### 🔥 1-one-to-million.py
 
 * M1: 1.78s
 * M1 Python 2: 0.98s
-* PC: 39.89
+* PC: 39.89s
+* LX: 2.71s
 
 ### 🔥 2-threaded-scraping.py
 
@@ -26,6 +29,11 @@ In the below test, there are two variables that can be changed: threads and how 
 * PC, 500 threads, 500 at-once: 3.49s
 * PC, 1000 threads, 1000 at-once: 7.12s
 * PC, 1000 threads, 100 at-once: 6.9s
+
+* LX, 50 threads, 50 at-once: 0.45s
+* LX, 500 threads, 500 at-once: 2.91s
+* LX, 1000 threads, 1000 at-once: 5.80s
+* LX, 1000 threads, 100 at-once: 5.60s
 
 With these results, we 10x'd our required responses with only a 6x increase in time-to-serve. This says Apple's M1 threads are efficient with their thread-switching (something Python naturally struggles with).
 
@@ -43,6 +51,7 @@ Test run on a 6,053 length page.
 
 * M1: 530 per-second (550 max)
 * PC: 485 per-second (489 max)
+* LX: 473 per-second
 
 **M1 out-performs by 9.2%**. M1 out-performs my personal scrape workspace in a single-core approach.
 
@@ -52,6 +61,7 @@ Perform 1,000,000 iterations of a sha256 hash digest + generate a random string 
 
 * M1: 4.95 seconds
 * PC: 4.42 seconds
+* LX: 5.29 seconds
 
 ### 🔥 5-jacobian.py
 
@@ -59,6 +69,7 @@ Performs 1,000,000 Jacobian computations. I'm not too familiar with this branch 
 
 * M1: 17.25 seconds
 * PC: 20.81 seconds
+* LX: 19.76 seconds
 
 ### 🔥 6-threaded-compute.py
 
@@ -69,6 +80,7 @@ Just 50 threads filled with heavy compute. Store the first 10,000,000 integers i
 * M1: 49.87 seconds - 50 threads, 4 at-once
 * M1: 48.76 seconds - 50 threads, 1 at-once
 * PC: untested
+* LX: 42.13 seconds - 50 threads, 4 at-once
 
 This test was interesting, since the M1 used a lot of "virtual memory" during this test. "Memory Used" displayed 28GB on my 8GB model as "Virtual Memory". Further, this reinforces the idea to not stuff threads in M1 Python.
 
