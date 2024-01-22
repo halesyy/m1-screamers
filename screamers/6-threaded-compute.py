@@ -8,7 +8,7 @@ Seeing the CPUs ability to multitask.
 from timeit import default_timer as timer
 
 def high_compute(x):
-    lots = [i for i in range(10000000)]
+    lots = [i for i in range(10_000_000)]
     lots = [i/5.2125 for i in lots]
     print("done")
     return len(lots)
