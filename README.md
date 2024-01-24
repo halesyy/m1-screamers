@@ -5,7 +5,7 @@
 | M1        | Apple M1 MacBook Air, 8gb 256gb, 8 raw cores in Terminal                                   | US$45[(Google)](https://www.google.com/search?q=estimate+cost+for+apple+m1+chip)                                                       |
 | PC        | Windows 10, i7-6700K @ 4.00 GHz (4 cores, 4 hyperthreaded) in Powershell                   | US$280[(Intel)](https://ark.intel.com/content/www/us/en/ark/products/88195/intel-core-i7-6700k-processor-8m-cache-up-to-4-20-ghz.html) |
 | M2        | Apple M2 Mac Mini, 24gb 1TB, 8 raw cores in Terminal<br />Using Python3.11                 |                                                                                                                                     |
-| LX        |                                                                                            |                                                                                                                                     |
+| LX        | The above PC target, on a Linux distro, specifically ElementaryOS.                        |                                                                                                                                     |
 | LX2       | My friend**[@harvmaster](https://github.com/harvmaster)** PC running Linux - 12700h, 3.10.12 |                                                                                                                                     |
 
 LX = same stats of PC, but ran on a Linux distro (ElementaryOS).
